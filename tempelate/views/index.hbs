@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/home.css">
+    <title>Rainbow</title>
+</head>
+
+<body>
+    {{>loader}}
+    <div class="load">
+        <header class="header">
+            {{>navbar_type2}}
+            <div class=box>
+                <h1>Rainbow</h1>
+                <span id="typing"></span>
+            </div>
+            <div class="wrap">
+                <div class="search">
+                    {{!-- <form action="/"> --}}
+                        <input required type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="button" class="searchButton">
+                            Search
+                            {{!--
+                    </form> --}}
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class=section>
+            {{#each posts}}
+            <div class="content">
+                <h1> <a href="http://localhost:3000/content/{{id}}">{{title}} </a></h1>
+                <h3>{{{trimString post}}}</h3>
+                <h4>Posted by <strong>{{publisher}}</strong> on {{dateFormat date "dddd, MMMM Do YYYY"}} </h4>
+                <hr>
+            </div>
+            {{/each}}
+            <div onclick="history.back()" class="btn">
+                <a href="#">Older Posts</a>
+            </div>
+            <div id="newpost" class="btn">
+                <a href="http://localhost:3000?limit=3&skip={{skp}}">Newer post</a>
+            </div>
+        </section>
+        <hr>
+        {{>footer}}
+        <script src="/js/index.js"></script>
+        <script src="/js/Hambuger.js"></script>
+    </div>
+</body>
+
+</html

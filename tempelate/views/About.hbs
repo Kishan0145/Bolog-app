@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/About.css">
+    <title>About</title>
+    <style>
+        .boxx {
+            border-radius: 2px;
+            margin: auto;
+            width: 146px;
+            height: 195px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-bottom: 50px;
+        }
+
+        .boxx img {
+            border-radius: 5px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigation -->
+    {{>loader}}
+    <div class="load">
+
+
+        <header class="header">
+            {{>navbar_type2}}
+            <div class=box>
+                <h1>About Me</h1>
+                <span id=typing></span>
+            </div>
+        </header>
+        <!-- content -->
+        <section class=section>
+            <div class="heading">
+                <h1>About Me</h1>
+            </div>
+            <div class=About>
+                <div class="boxx">
+                    <img src="/img/IMG-20190110-WA0031.jpg" alt="">
+                </div>
+            <div style="text-align: justify;">
+                <span>
+                    I am <strong>Kishan Sharma</strong>. I am a web developer having hands on HTML,CSS,JavaScript,Nodejs,Express,Mongodb,Mongoose,Python. I have been doing development for last 1 year. I have created this website with a aim that everyone can be a Blogger.
+                    This website provides you a easy interface where you can write,edit and publish your blogs.
+                </span>
+            </div>
+        </section>
+        <hr>
+        <!-- fotter -->
+        {{>footer}}
+        <script src="/js/Hambuger.js"></script>
+        <script src="/js/About.js"></script>
+    </div>
+</body>
+
+</html>

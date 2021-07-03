@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/Contact.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="https://cdn.tiny.cloud/1/zfdgti4wxmrxt06kxd5u6bd45r9omtu9sj0nnnq5r59z4c59/tinymce/5/tinymce.min.js"
+        <title>Rainbow</title >
+</head >
+
+    <body>
+        {{>loader}}
+    <div class="loader">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <header class="header">
+        {{>navbar}}
+        <div class=box>
+            <h1>Update Your Post</h1>
+            <span id="typing"></span>
+        </div>
+    </header>
+    <section class=section>
+        <form action="/post/dashboard/update/{{id}}?_method=PUT" method="POST" class="contact" id="form" data-flag="0">
+            <input class="input" type="text" id="tittle" name="title" placeholder="Title" required value="{{title}}">
+            <hr id=namehr class="hr">
+            <input class="input" type="text" id="publisher" name="publisher" placeholder="Publisher" required
+                value="{{publisher}}">
+            <hr id=emailhr class="hr">
+            <textarea name="post" id="post">{{{post}}}</textarea>
+            {{!-- <textarea class="input" name="post" id="post" cols="30" rows="10"
+                placeholder="Post">{{post}}</textarea> --}}
+            <hr id=messagehr class="hr">
+            <div class=label>
+                <input type="submit" value="update Post" class="submit" id="submit">
+            </div>
+        </form>
+    </section>
+    <hr>
+    {{>footer}}
+    <script src="/js/Hambuger.js"></script>
+    <script src="/Js/update.js"></script>
+    </div>
+    </body>
+
+</html>

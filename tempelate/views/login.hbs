@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/home.css">
+    <link rel="stylesheet" href="/Css/Contact.css">
+    <title>Login</title>
+</head>
+
+<body>
+    {{>loader}}
+    <div class="load">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <header class="header">
+            {{>navbar_type2}}
+            <div class=box>
+                <h1>Login</h1>
+                <span id="typing"></span>
+            </div>
+        </header>
+        <section class=section>
+            <form action="/users/login" method="POST" class="contact" id="form" data-flag="0">
+                <input class="input" type="email" id="Email" name="email" placeholder="Email" required>
+                <hr id=emailhr class="hr">
+                <input class="input" type="password" id="password" name="password" placeholder="Password" required>
+                <input type="checkbox" onclick="myFunction()">Show Password
+                <hr id=phonehr class="hr">
+                <p style="color: red;" id="errormsg">{{error}}</p>
+                <div style="display: inline" class=label>
+                    <input id="btn" type="submit" value="Login" class="submit">
+                </div>
+                <div id="newpost" class="btn">
+                    <a href="/users">Create Account</a>
+                </div>
+            </form>
+        </section>
+        <hr>
+        {{>footer}}
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/js/login.js"></script>
+        <script src="/js/Hambuger.js"></script>
+    </div>
+</body>
+
+</html>

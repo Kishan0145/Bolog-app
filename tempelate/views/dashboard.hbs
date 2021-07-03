@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/Contact.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <title>Dashboard</title>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    {{>loader}}
+    <div class="load">
+
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+        <header class="header">
+            {{>navbar}}
+            <div class=box>
+                <h1>Dashboard</h1>
+                <span id="typing"></span>
+            </div>
+        </header>
+        <section class=table>
+
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Publisher</th>
+                    <th>Post</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                {{#each posts}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{publisher}}</td>
+                    <td>{{{trimString post}}}</td>
+                    <td>{{dateFormat date "dddd, MMMM Do YYYY"}}</td>
+                    <form method="POST" action="/post/dashboard/update/{{_id}}">
+                        <td><input class="submit" id="submit" type="submit" value="Edit"></td>
+                    </form>
+                    <form onsubmit="sweetAlert()" method="POST" action="/post/dashboard/{{_id}}?_method=DELETE">
+                        <td><input class="submit" id="submit" type="submit" value="Delete"></td>
+                    </form>
+                </tr>
+                {{/each}}
+            </table>
+        </section>
+        <hr>
+        {{>footer}}
+        <script src="/js/Hambuger.js"></script>
+        <script src="/js/dashboard.js"></script>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+</body>
+
+</html>

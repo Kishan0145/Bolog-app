@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/About.css">
+    <title>Rainbow</title>
+    <style>
+        .section{
+            width: 90%;
+        }
+        .heading h1{
+            text-align: unset;
+        }
+    </style>
+</head>
+
+<body>
+    {{>loader}}
+    <div class="load">
+        <!-- navigation -->
+        <header class="header">
+            {{>navbar_type2}}
+        </header>
+        <!-- content -->
+        <section class=section>
+            <div class="heading">
+                <h1>{{title}}</h1>
+            </div>
+            <div class=About>
+                <span>
+                    {{{post}}}
+                </span>
+            </div>
+        </section>
+        <hr>
+        <!-- fotter -->
+        {{>footer}}
+        <script src="/js/Hambuger.js"></script>
+        <script src="/js/About.js"></script>
+    </div>
+</body>
+
+</html>

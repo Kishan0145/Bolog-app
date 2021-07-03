@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/Contact.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <title>Contact</title>
+</head>
+
+<body>
+    {{>loader}}
+    <div class="load">
+
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {{!--
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> --}}
+        <header class="header">
+            {{>navbar_type2}}
+            <div class=box>
+                <h1>Contact Me</h1>
+                <span id="typing"></span>
+            </div>
+        </header>
+        <section class=section>
+            <form action="/contact" method="POST" class="contact" id="form" data-flag="0">
+                <input class="input" type="text" id="Name" name="name" placeholder="Name" required>
+                <hr id=namehr class="hr">
+                <input class="input" type="email" id="Email" name="email" placeholder="Email" required>
+                <hr id=emailhr class="hr">
+                <input class="input" type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                <hr id=phonehr class="hr">
+                <textarea class="input" name="message" id="message" cols="30" rows="10"
+                    placeholder="Message"></textarea>
+                <hr id=messagehr class="hr">
+                <div class=label>
+                    <input id="btn" type="button" value="Submit" class="submit">
+                    {{!-- <input type="submit" value="Submit" id="submit"> --}}
+                </div>
+            </form>
+        </section>
+        <hr>
+        {{>footer}}
+        <script src="/js/Hambuger.js"></script>
+        <script src="/Js/contact.js"></script>
+    </div>
+</body>
+
+</html>
