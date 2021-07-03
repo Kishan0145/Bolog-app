@@ -36,7 +36,7 @@ document.querySelector(".searchButton").addEventListener("click", () => {
     const search = document.querySelector(".searchTerm").value;
     console.log(search)
     if (search) {
-        location.href = `http://localhost:3000?search=${search}`;
+        location.href = `?search=${search}`;
     }
 })
 addEventListener("load", () => {
