@@ -32,45 +32,6 @@ addEventListener('load', function () {
     type();
 })
 
-// document.getElementById("btn").addEventListener("click",()=>{
-//     nam =  document.getElementById("Name").value,
-//     email = document.getElementById("Email").value,
-//     password = document.getElementById("password").value,
-//     console.log(nam,email,password);
-// })
-
-
-
-
-// document.getElementById("btn").addEventListener("click", () => {
-//     if (document.getElementById("Name").value == "" || document.getElementById("Email").value == "" || document.getElementById("password").value == "") {
-//         swal("Error!", "Kindly fill all the required feilds!", "error");
-//     }
-//     else {
-//         const data = {
-//             name: document.getElementById("Name").value,
-//             email: document.getElementById("Email").value,
-//             password: document.getElementById("password").value,
-//         }
-//         const params = {
-//             method: "POST",
-//             headers: {
-//                 "Content-type": "application/json; charset=UTF-8"
-//             },
-//             body: JSON.stringify(data),
-//         }
-//         fetch("http://localhost:3000/users", params).then((response) => {
-//             return response.json();
-//         }).then((data) => {
-//             console.log(data);
-//         }).catch((e) => {
-//             console.log(e);
-//         })
-
-//         swal("Thank you!", "You have sucessfully created your account.", "success");
-//         document.querySelector("form").reset();
-//     }
-// });
 
 function myFunction() {
     var x = document.getElementById("password");
@@ -80,15 +41,6 @@ function myFunction() {
         x.type = "password";
     }
 }
-// document.querySelector("form").addEventListener(("submit"),()=>{
-//         fetch("http://localhost:3000/users").then((response)=>{
-//             return response.json();
-//         }).then((data)=>{
-//             console.log(data);
-//         }).catch((e)=>{
-//             console.log(e);
-//         })
-// })
 
 
 addEventListener("load", () => {

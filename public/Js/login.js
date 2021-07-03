@@ -40,19 +40,7 @@ function myFunction() {
     x.type = "password";
   }
 }
-// document.querySelector("form").addEventListener("submit",(e)=>{
-//   e.preventDefault()
-//   fetch("http://localhost:3000/users/login").then((response)=>{
-//     console.log("response")
-//     return response.json();
-//   }).then((data)=>{
-//     console.log("data")
-//       console.log(data)
-//   }).catch((e)=>{
-//     console.log("error")
-//     console.log(e);
-//   })
-// })
+
 
 addEventListener("load", () => {
   var start = Date.now(); // The current date (in miliseconds)

@@ -112,12 +112,4 @@ addEventListener("load", () => {
         var timer = setInterval(spinWheel, 100);
           
     })
-// const elem = document.querySelector("form")
-// elem.addEventListener("submit", (e) => {
-//         swal({
-//                 title: "Thank you!",
-//                 text: "Your responce has been submited!",
-//                 icon: "success",
-//               })
-// });
 

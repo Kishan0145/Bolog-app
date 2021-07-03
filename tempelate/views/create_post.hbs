@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Css/Contact.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
-    {{!--
-    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script> --}}
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
     <script src="https://cdn.tiny.cloud/1/zfdgti4wxmrxt06kxd5u6bd45r9omtu9sj0nnnq5r59z4c59/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
     <title>Create</title>
@@ -19,8 +18,6 @@
     {{>loader}}
     <div class="load">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        {{!--
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> --}}
         <header class="header">
             {{>navbar}}
             <div class=box>
@@ -34,18 +31,12 @@
                 <hr id=namehr class="hr">
                 <input class="input" type="email" id="publisher" name="publisher" placeholder="Publisher" required>
                 <hr id=emailhr class="hr">
-                {{!-- <input class="input" type="text" id="phone" name="phone" placeholder="Phone Number" required>
-                <hr id=phonehr class="hr"> --}}
                 <textarea id="post" , name="post">
             Create Your post!
             </textarea>
-                {{!-- <textarea name="editor1"></textarea> --}}
-                {{!-- <textarea class="input" name="post" id="post" cols="30" rows="10" placeholder="Post"></textarea>
-                --}}
                 <hr id=messagehr class="hr">
                 <div class=label>
                     <input type="button" value="Create Post" class="submit" id="submit">
-                    {{!-- <input type="submit" value="Submit" id="submit"> --}}
                 </div>
             </form>
         </section>
