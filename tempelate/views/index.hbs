@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Css/home.css">
-    <link rel="icon" type="image/png" href="/img/favicon.ico"/>
-    <link rel="icon" type="image/png" href="/img/favicon.ico"/>
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
     <title>Rainbow</title>
 </head>
 
@@ -22,9 +22,9 @@
             </div>
             <div class="wrap">
                 <div class="search">
-                        <input required type="text" class="searchTerm" placeholder="What are you looking for?">
-                        <button type="button" class="searchButton">
-                            Search
+                    <input required type="text" class="searchTerm" placeholder="What are you looking for?">
+                    <button type="button" class="searchButton">
+                        Search
                     </button>
                 </div>
             </div>
@@ -33,7 +33,11 @@
         <section class=section>
             {{#each posts}}
             <div class="content">
+<<<<<<< HEAD
                 <h1> <a href="/content/{{id}}">{{title}}</a></h1>
+=======
+                <h1> <a href="http://localhost:3000/content/{{id}}">{{title}} </a></h1>
+>>>>>>> parent of ba4ff61 (setting up for heroku)
                 <h3>{{{trimString post}}}</h3>
                 <h4>Posted by <strong>{{publisher}}</strong> on {{dateFormat date "dddd, MMMM Do YYYY"}}</h4>
                 <hr>
@@ -43,7 +47,7 @@
                 <a href="#">Older Posts</a>
             </div>
             <div id="newpost" class="btn">
-                <a href="?limit=3&skip={{skp}}">Newer post</a>
+                <a href="http://localhost:3000?limit=3&skip={{skp}}">Newer post</a>
             </div>
         </section>
         <hr>

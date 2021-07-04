@@ -82,7 +82,7 @@ document.getElementById("btn").addEventListener("click",() => {
                         },
                         body: JSON.stringify(data),
                 }
-                fetch("/contact", params).then((response) => {
+                fetch("http://localhost:3000/contact", params).then((response) => {
                         return response.json();
                 }).then((data) => {
                         console.log(data);
