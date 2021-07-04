@@ -51,7 +51,7 @@ document.getElementById("submit").addEventListener("click", () => {
             },
             body: JSON.stringify(data),
         }
-        fetch("http://localhost:3000/post", params).then((response) => {
+        fetch("/post", params).then((response) => {
             return response.json();
         }).then((data) => {
             console.log(data);
