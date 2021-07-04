@@ -85,7 +85,7 @@
     margin-top: 10px;
     border: none;
     outline: none;
-    font-size: 25px;
+    /* font-size: 15px; */
 }
 .input::-webkit-input-placeholder{
     font-size: 18px;
@@ -302,6 +302,7 @@ table {
         #title{
             font-size: 13px;
         }
+    
     
 }
 }
