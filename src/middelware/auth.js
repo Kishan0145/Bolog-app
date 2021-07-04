@@ -5,7 +5,7 @@ const auth = async (req,res,next)=>{
     try{
         console.log("yes")
         const token = req.cookies.jwt;
-        const decode = jwt.verify(token,process.env.TOKEN_SEC);
+        const decode = jwt.verify(token,`${process.env.TOKEN_SEC}`);
         const user = await User.findOne({email: decode.email});
         if(!user){
             throw new Error("Please Authenticate")

@@ -27,8 +27,9 @@ router.post("/users", async (req, res) => {
         res.cookie("jwt", token)
         res.redirect("/post/dashboard");
     } catch (e) {
-        // res.status(500).send(e)
-        res.render("create_account", { emailError: "Account already exist. Try with a different Email address. " })
+        console.log(e)
+        res.status(500).send(e)
+        // res.render("create_account", { emailError: "Account already exist. Try with a different Email address. " })
 
     }
 })
