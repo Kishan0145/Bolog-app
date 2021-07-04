@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
             }).skip(skp).limit(lmt);
         }
         if (skp >= totalPost.length) {
-          return res.redirect("/");
+        //   return res.redirect("/");
         }
         skp = skp + 5;
         res.render("index", {
