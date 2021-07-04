@@ -35,12 +35,13 @@ addEventListener('load', function () {
 
 document.getElementById("submit").addEventListener("click", () => {
     tinyMCE.triggerSave();
-    if (document.getElementById("tittle").value == "" || document.getElementById("publisher").value == "" || document.getElementById("post").value == "") {
+    if (document.getElementById("tittle").value == "" || document.getElementById("publisher").value == "" || document.getElementById("post").value == "" || document.getElementById("descr").value == "") {
         swal("Error!", "Kindly fill all the required feilds!", "error");
     }
     else {
         const data = {
             title: document.getElementById("tittle").value,
+            description:document.getElementById("descr").value,
             publisher: document.getElementById("publisher").value,
             post: document.getElementById("post").value,
         }

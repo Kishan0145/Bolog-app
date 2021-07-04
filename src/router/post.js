@@ -16,8 +16,8 @@ router.get("/", async (req, res) => {
             function (err, docs) {
             }).skip(skp).limit(lmt);
         }
-        if (skp >= totalPost.length) {
-        //   return res.redirect("/");
+        if (skp >= totalPost.length && skp!=0) {
+          return res.redirect("/");
         }
         skp = skp + 5;
         res.render("index", {
@@ -35,7 +35,7 @@ router.get("/content/:id", async (req, res) => {
         const posts = await Post.findById(req.params.id);
         res.render("post", {
             title: posts.title,
-            post: posts.post,
+            post:posts.post,
         })
     } catch (e) {
         res.status(500).send(e);
@@ -63,6 +63,7 @@ router.get("/post/dashboard", auth, async (req, res) => {
 router.post("/post", auth, async (req, res) => {
     const post = new Post({
         title: req.body.title,
+        description:req.body.description,
         publisher: req.body.publisher,
         post: req.body.post,
         date: new Date(),
@@ -95,12 +96,14 @@ router.post("/post/dashboard/update/:id", auth, async (req, res) => {
         const posts = await Post.findById(req.params.id);
         res.render("update", {
             title: posts.title,
+            description:posts.description,
             publisher: posts.publisher,
             post: posts.post,
             id: posts._id,
         });
         await Post.findByIdAndUpdate(req.params.id, {
             title: req.body.title,
+            description:req.body.description,
             publisher: req.body.publisher,
             post: req.body.post
         })

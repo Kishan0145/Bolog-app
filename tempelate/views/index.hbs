@@ -34,7 +34,7 @@
             {{#each posts}}
             <div class="content">
                 <h1> <a href="/content/{{id}}">{{title}}</a></h1>
-                <h3>{{{trimString post}}}</h3>
+                <h3>{{description}}</h3>
                 <h4>Posted by <strong>{{publisher}}</strong> on {{dateFormat date "dddd, MMMM Do YYYY"}}</h4>
                 <hr>
             </div>
@@ -43,7 +43,7 @@
                 <a href="#">Older Posts</a>
             </div>
             <div id="newpost" class="btn">
-                <a href="?limit=3&skip={{skp}}">Newer post</a>
+                <a href="?limit=5&skip={{skp}}">Newer post</a>
             </div>
         </section>
         <hr>
