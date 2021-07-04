@@ -6,7 +6,11 @@ const auth = async (req,res,next)=>{
         console.log("yes")
         const token = req.cookies.jwt;
 <<<<<<< HEAD
+<<<<<<< HEAD
         const decode = jwt.verify(token,`${process.env.TOKEN_SEC}`);
+=======
+        const decode = jwt.verify(token,"thisisaveryimportanttopic");
+>>>>>>> parent of ba4ff61 (setting up for heroku)
 =======
         const decode = jwt.verify(token,"thisisaveryimportanttopic");
 >>>>>>> parent of ba4ff61 (setting up for heroku)
