@@ -302,15 +302,5 @@ table {
         #title{
             font-size: 13px;
         }
-    td,th{
-        font-size: 8px;
-    }
-    .submit{
-        padding: 5px 10px 5px 10px;
-        font-size: 8px;
-    }
-    .table{
-        padding:0px;
-    }
 }
 }
