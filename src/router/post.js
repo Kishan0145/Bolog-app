@@ -101,7 +101,9 @@ router.post("/post/dashboard/update/:id", auth, async (req, res) => {
             post: posts.post,
             id: posts._id,
         });
-        if(!req.body){
+        // console.log(req.body)
+        if(Object.keys(req.body).length!=0){
+            // console.log("inside")
             await Post.findByIdAndUpdate(req.params.id, {
                 title: req.body.title,
                 description:req.body.description,
