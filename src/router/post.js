@@ -101,12 +101,14 @@ router.post("/post/dashboard/update/:id", auth, async (req, res) => {
             post: posts.post,
             id: posts._id,
         });
-        await Post.findByIdAndUpdate(req.params.id, {
-            title: req.body.title,
-            description:req.body.description,
-            publisher: req.body.publisher,
-            post: req.body.post
-        })
+        if(!req.body){
+            await Post.findByIdAndUpdate(req.params.id, {
+                title: req.body.title,
+                description:req.body.description,
+                publisher: req.body.publisher,
+                post: req.body.post
+            })
+        }
     } catch (e) {
         res.status(500).send(e);
     }
