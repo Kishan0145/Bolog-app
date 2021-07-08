@@ -11,9 +11,9 @@ router.get("/users", (req, res) => {
 })
 
 router.get("/users/login", (req, res) => {
-    if(req.cookies.jwt){
-      return res.redirect("/post/dashboard");
-    }
+    // if(req.cookies.jwt){
+    //   return res.redirect("/post/dashboard");
+    // }
     res.render("login")
 })
 

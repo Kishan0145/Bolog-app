@@ -14,9 +14,9 @@ const auth = async (req,res,next)=>{
         req.token = token;
         next();
     }catch(e){
-        if(e.message === "jwt expired" ){
-            return res.render("login")
-        }
+        // if(e.message === "jwt expired" ){
+        //     return res.render("login")
+        // }
         res.status(500).render("404")
     }
 };
