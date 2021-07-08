@@ -11,8 +11,12 @@ const auth = async (req,res,next)=>{
             throw new Error("Please Authenticate")
         }
         req.user = user;
+        req.token = token;
         next();
     }catch(e){
+        if(e.message === "jwt expired" ){
+            return res.render("login")
+        }
         res.status(500).render("404")
     }
 };

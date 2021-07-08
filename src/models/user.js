@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema({
 userSchema.methods.generateToken = async function(){
     console.log("running");
     const user = this;
-    const token = jwt.sign({email : user.email},`${process.env.TOKEN_SEC}`);
+    const token = jwt.sign({email : user.email},`${process.env.TOKEN_SEC}`,{expiresIn:"1d"});
     user.tokens = user.tokens.concat({token});
     await user.save();
     return token;
