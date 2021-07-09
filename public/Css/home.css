@@ -96,7 +96,11 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 16px;
     font-weight: 100;
+<<<<<<< HEAD
     color:black;
+=======
+    color:#1b1515;
+>>>>>>> parent of 9d80483 (finale setup)
     transition-property: all;
     transition-duration: 0.1s;
     letter-spacing: 1px;
