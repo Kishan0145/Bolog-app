@@ -13,8 +13,10 @@ const auth = async (req,res,next)=>{
         req.user = user;
         next();
     }catch(e){
-        res.send(e)
-        // res.status(500).render("404")
+        if(e.message === "jwt expired"){
+            return res.render("login")
+        }
+        res.status(500).render("404")
     }
 };
 module.exports = auth;

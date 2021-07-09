@@ -19,7 +19,7 @@ const partailsPath = path.join(__dirname, "../tempelate/partials");
 hbs.registerHelper('dateFormat', require('handlebars-dateformat'))
 hbs.registerPartials(partailsPath);
 hbs.registerHelper('trimString', function(passedString) {
-    var theString =`${passedString.substring(0,40)}[...]`;
+    var theString =`${passedString.substring(0,60)}[...]`;
     return new hbs.SafeString(theString)
 });
 

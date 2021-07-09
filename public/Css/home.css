@@ -98,6 +98,7 @@
     font-weight: 100;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     color:black;
 =======
     color:#1b1515;
@@ -105,6 +106,9 @@
 =======
     color:#1b1515;
 >>>>>>> parent of 9d80483 (finale setup)
+=======
+    color:#665151;
+>>>>>>> parent of 9ab3c93 (finale setup)
     transition-property: all;
     transition-duration: 0.1s;
     letter-spacing: 1px;
@@ -317,9 +321,6 @@
         letter-spacing: 0px;
         font-size: 13px;
     }
-    .wrap{
-        top:29%;
-    }
 
 
 
@@ -357,9 +358,6 @@
     .container{
         display: block;
     }
-    .wrap{
-        top:37%;
-    }
 }
 @media only screen  and (max-width:563px)
 {
@@ -395,29 +393,23 @@
         font-size: 23px;
         line-height: 60px;
     }
-}
-@media only screen and (max-width:415px)
- {
-    .header{
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/400x600");
-    }
-    .box h1{
-         font-size: 230%;
-     }
-     #title{
-         font-size: 13px;
-     }
-     .wrap{
-         top:52%;
-         width: 70%;
-     }
-     .search{
-         width: 100%;
-     }
-    
-}
-@media only screen and (height:812px){
-    .wrap{
-        top:43%;
+    @media only screen and (max-width:415px)
+     {
+        .header{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/400x600");
+        }
+        .box h1{
+             font-size: 230%;
+         }
+         #title{
+             font-size: 13px;
+         }
+         .wrap{
+             width: 70%;
+         }
+         .search{
+             width: 100%;
+         }
+        
     }
 }
