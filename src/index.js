@@ -45,9 +45,9 @@ app.get("/about",(req,res)=>{
     res.render("About");
 })
 
-app.get("*",(req,res)=>{
-  res.render("404");
-})
+// app.get("*",(req,res)=>{
+//   res.render("404");
+// })
 
 app.listen(port, () => {
     console.log(`running at port ${port}`);

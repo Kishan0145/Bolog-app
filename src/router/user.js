@@ -11,8 +11,24 @@ router.get("/users", (req, res) => {
 })
 
 router.get("/users/login", (req, res) => {
+    // if(req.cookies.jwt){
+    //   return res.redirect("/post/dashboard");
+    // }
     res.render("login")
 })
+router.get("/user/logout",auth,async(req,res)=>{
+    try {
+        req.user.tokens = [];
+        await req.user.save();
+        res.clearCookie("jwt");
+        // res.render("index")
+        res.send("logout")
+    } catch (e) {
+        res.status(500).send(e);
+    }
+    res.render("index")
+})
+
 
 router.post("/users", async (req, res) => {
     const user = new User({
@@ -53,15 +69,16 @@ router.post("/users/login", async (req, res) => {
     }
 })
 
-router.post("/", auth, async (req, res) => {
-    try {
-        req.user.tokens = [];
-        await req.user.save();
-        res.clearCookie("jwt");
-        res.render("index")
-    } catch (e) {
-        res.status(500).send(e);
-    }
-})
+// router.get("/", auth, async (req, res) => {
+//     try {
+//         req.user.tokens = [];
+//         await req.user.save();
+//         res.clearCookie("jwt");
+//         // res.render("index")
+//         res.send("logout")
+//     } catch (e) {
+//         res.status(500).send(e);
+//     }
+// })
 
 module.exports = router;

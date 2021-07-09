@@ -13,13 +13,8 @@ const auth = async (req,res,next)=>{
         req.user = user;
         next();
     }catch(e){
-<<<<<<< HEAD
-        // if(e.message === "jwt expired" ){
-        //     return res.render("login")
-        // }
-=======
->>>>>>> parent of bcc07b2 (improving jwt token handeling)
-        res.status(500).render("404")
+        res.send(e)
+        // res.status(500).render("404")
     }
 };
 module.exports = auth;
