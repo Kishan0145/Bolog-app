@@ -41,7 +41,7 @@ document.querySelector(".searchButton").addEventListener("click", () => {
 })
 addEventListener("load", () => {
     var start = Date.now(); // The current date (in miliseconds)
-    var end = start + 1000; // 5 seconds afterwords
+    var end = start + 500; 
 
     function spinWheel() {
         start = Date.now(); // Get the date currently
