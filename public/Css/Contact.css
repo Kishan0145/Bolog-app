@@ -239,6 +239,7 @@ table {
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/810x600");
     }
     .navitems{
+       
         display: inline-block
     }
     .liitems{
@@ -258,6 +259,13 @@ table {
         display: flex;
     }
     .navbar{
+        transition-property: all;
+        transition-duration: 0.5s;
+        height: 0;
+        position: fixed;
+        left: 0px;
+        top:0px;
+        z-index: 2;
         background-color: white;
     }
     .liitems a {

@@ -211,6 +211,13 @@
         display: flex;
     }
     .navbar{
+        transition-property: all;
+        transition-duration: 0.5s;
+        height: 0;
+        position: fixed;
+        left: 0px;
+        top:0px;
+        z-index: 2;
         background-color: white;
     }
     .liitems a {
