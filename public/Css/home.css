@@ -96,19 +96,9 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 16px;
     font-weight: 100;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     color:black;
-=======
     color:#1b1515;
->>>>>>> parent of 9d80483 (finale setup)
-=======
-    color:#1b1515;
->>>>>>> parent of 9d80483 (finale setup)
-=======
     color:#665151;
->>>>>>> parent of 9ab3c93 (finale setup)
     transition-property: all;
     transition-duration: 0.1s;
     letter-spacing: 1px;
@@ -331,7 +321,7 @@
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/810x600");
     }
     .navitems{
-        display: inline-block
+        display: inline-block;
     }
     .liitems{
         display: none;
@@ -350,6 +340,13 @@
         display: flex;
     }
     .navbar{
+        transition-property: all;
+        transition-duration: 0.5s;
+        height: 0;
+        position: fixed;
+        left: 0px;
+        top:0px;
+        z-index: 2;
         background-color: white;
     }
     .liitems a {
