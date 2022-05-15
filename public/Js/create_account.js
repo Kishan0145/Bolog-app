@@ -1,5 +1,5 @@
 
-const text = ["Create your account here.", "and become the member of Rainbow community "]
+const text = ["Create your account here.", "and become the member of Metaverse community "]
 var char = 0;
 var word = 0;
 var temp;
