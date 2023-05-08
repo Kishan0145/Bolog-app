@@ -6,7 +6,7 @@
  }
  .header{
     min-height: 550px;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/1600x600");
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/background1600X400.jpg");
     background-repeat: no-repeat;
  }
  .navbar{
@@ -189,7 +189,7 @@
 @media only screen and (max-width:870px)
 {
     .header{
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/810x600");
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/background810X600.png");
     }
     .navitems{
         display: inline-block
@@ -231,7 +231,7 @@
 @media only screen  and (max-width:563px)
 {
     header{
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/563x600");
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/background563X600.png");
     }
     .section{
         width: 90%;
@@ -256,7 +256,7 @@
     @media only screen and (max-width:415px)
      {
         .header{
-            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://source.unsplash.com/random/400x600");
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/background400X600.png");
         }
         .box h1{
              font-size: 230%;

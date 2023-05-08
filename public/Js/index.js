@@ -1,5 +1,5 @@
 
-const text = ["Welcome to Metaverse. ", "A website to publish your Blogs.", "It is developed and managed by Us. ", "For any query please contact! "]
+const text = ["Welcome to Rainbow. ", "A website to publish your Blogs.", "It is developed and managed by Kishan Sharma. ", "For any query please contact! "]
 var char = 0;
 var word = 0;
 var temp;
