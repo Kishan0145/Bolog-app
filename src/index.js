@@ -8,7 +8,6 @@ const postRouter = require("./router/post");
 const userRouter = require("./router/user")
 const Post = require("./models/post");
 const methodOverride = require('method-override');
-const bootbox = require("bootbox")
 const cookieParser = require("cookie-parser");
 require("./db/mongoose");
 
